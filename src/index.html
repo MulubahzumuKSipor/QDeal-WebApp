@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickDeals - Landing Page</title>
+    <script type="module" src="/main.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="bg-black text-white">
+    <header class="flex justify-between items-center p-6">
+      <h1 class="text-3xl font-bold text-yellow-500">
+        Quick<span class="text-blue-500">Deals</span>
+      </h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:text-gray-400">Products</a></li>
+          <li><a href="#" class="hover:text-gray-400">Connect</a></li>
+          <li><a href="#" class="hover:text-gray-400">Pricing</a></li>
+          <li><a href="#" class="hover:text-gray-400">About Us</a></li>
+        </ul>
+      </nav>
+      <button
+        class="border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black"
+      >
+        Start Free Trial
+      </button>
+    </header>
+
+    <main class="flex justify-between items-center px-10 mt-20">
+      <section class="max-w-lg">
+        <h2 class="text-5xl font-bold">
+          Connecting Clients with Business Owners
+        </h2>
+        <p class="mt-4 text-gray-400">
+          Skip the back-and-forth headaches—negotiate deals in real-time and get
+          straight to the good part. No delays, no drama, just smooth deals with
+          QDeals!
+        </p>
+        <div
+          class="mt-6 flex items-center border rounded-full p-2 w-full max-w-md"
+        >
+          <input
+            type="text"
+            placeholder="Try Java Developer, React Dev etc."
+            class="bg-transparent outline-none flex-1 px-4"
+          />
+          <button class="bg-white text-black px-6 py-2 rounded-full">
+            Find a CEO
+          </button>
+        </div>
+        <p class="mt-4 text-gray-400">Trusted by 50k+ users</p>
+      </section>
+
+      <section class="bg-gray-900 p-6 rounded-xl max-w-md w-full">
+        <h3 class="text-xl text-blue-400 font-bold">LOGIN</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Login to get full access to the app features
+        </p>
+        <form class="flex flex-col space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            class="p-2 rounded bg-gray-800 text-white outline-none"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="p-2 rounded bg-gray-800 text-white outline-none"
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            class="p-2 rounded bg-gray-800 text-white outline-none"
+          />
+          <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+            Submit
+          </button>
+          <a href="#" class="text-gray-400 text-sm text-center"
+            >Forgot Password?</a
+          >
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
