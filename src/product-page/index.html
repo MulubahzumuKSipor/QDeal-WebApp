@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickDeals Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <section id="product">
+      <p>Products</p>
+      <img src="../images/solar--cart-bold-duotone.svg" alt="Cart" />
+    </section>
+    <section id="main-content">
+      <h2>Welcome <span class="name"></span></h2>
+      <section id="stats"></section>
+      <section id="rates"></section>
+      <section id="interest"></section>
+      <section id="tools">
+        <input type="text" id="search" placeholder="Search for products..." />
+        <button id="search-button">Search</button>
+
+        <label for="price">Price Range</label>
+        <select name="price" id="priceRange"></select>
+
+        <label for="category">Category:</label>
+        <select id="category"></select>
+      </section>
+      <section class="products">
+        <ul class="product-list"></ul>
+      </section>
+      <section>
+        <div class="pagination"></div>
+      </section>
+    </section>
+    <section class="dashboard">
+      <aside class="sidebar">
+        <div>
+          <a href="../index.html"
+            ><h1 class="logo">Quick<span>Deals</span></h1></a
+          >
+          <nav class="nav">
+            <li><a class="nav-button" href="#">Products</a></li>
+            <li><a class="nav-button" href="#">Services</a></li>
+            <li><a class="nav-button" href="#">Connect</a></li>
+            <li><a class="nav-button" href="#">Latest Offers</a></li>
+          </nav>
+          <div class="middle">
+            <h3>Support</h3>
+            <a href="#">Get Started</a> <br />
+            <a href="">About us</a>
+          </div>
+        </div>
+        <div class="sidebar-footer">
+          <p class="contact-info">
+            Mulubahzumu Kemmeh Sipor<br />
+            sipormulubah@outlook.com
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <script type="module" src="../js/product-list.mjs" defer></script>
+    <script type="module" src="../js/dashboard.mjs" defer></script>
+  </body>
+</html>
