@@ -1,11 +1,10 @@
-export async function loadTemplate(path) {
-    const res = await fetch(path);
-    const template = await res.text();
-    return template;
-}
-  
-export function renderWithTemplate(template, parentElement) {
-parentElement.innerHTML = template;
+
+export function setClick(selector, callback) {
+qs(selector).addEventListener("touchend", (event) => {
+    event.preventDefault();
+    callback();
+});
+qs(selector).addEventListener("click", callback);
 }
 
 export async function loadFooter() {
