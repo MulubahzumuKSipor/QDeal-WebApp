@@ -26,10 +26,10 @@ export function renderProducts(products) {
         const productItem = document.createElement('div');
         productItem.className = 'product-item';
         productItem.innerHTML = `
-            <h2>${product.title}</h2>
             <p>${product.description}</p>
             <p>Price: $${product.price}</p>
             <img src="${product.thumbnail}" alt="${product.title}">
+            <h2>${product.title}</h2>
         `;
         productList.appendChild(productItem);
     });
