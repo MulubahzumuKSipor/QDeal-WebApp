@@ -5,7 +5,7 @@ export default defineConfig({
   root: "src/",
   // publicDir: "src/public",
   build: {
-    outDir: 'C:/Users/USA/OneDrive - BYU-Idaho/REL 275C/QDeal-WebApp/dist',
+    outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
