@@ -209,5 +209,4 @@ categorySelect.addEventListener('change', filterAndDisplayProducts);
 priceRange.addEventListener('change', filterAndDisplayProducts);
 
 init();
-await displayCategory();
-displayPriceRange();
+
