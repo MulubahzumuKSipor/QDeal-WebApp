@@ -1,16 +1,16 @@
-import { fetchProducts } from "./product-list.mjs";
 
 
 const dashStats = document.querySelector('#stats');
 const dashRates = document.querySelector('#rates');
 const dashTopics = document.querySelector('#interest');
-const nameList = document.querySelector('#category');
 const dashFilter = document.querySelector('#filter');
+
+
 
 let amountActive = 25
 let totalConnect = 100
 
-let totalProducts = 0;
+
 
 // Rates variables
 let startingRate = 20; 
@@ -21,10 +21,6 @@ let previousTimeSpent = 0; // Initialize previous time spent to 0
 
 let startTime = Date.now();  // Capture the start time when the page loads
 
-fetchProducts().then(data => {
-  totalProducts = data.products.length;
-  console.log(data);
-});
 
 window.addEventListener('beforeunload', function() {
   let timeSpent = Date.now() - startTime;  // Calculate time spent
@@ -45,15 +41,13 @@ async function renderDashboard(){
   dashTopics.innerHTML = displayTopics();
   dashStats.innerHTML = displayStats();
   dashRates.innerHTML = displayRates();
-  await displayCategory();
-  displayPriceRange();
 
 }
 
 function displayStats(){
   const stats = `
   <div class="card">Active Users<br /><span>${amountActive}/${totalConnect}</span></div>
-        <div class="card">Products Bought<br /><span>${totalProducts}</span></div>
+        <div class="card">Products Bought<br /><span>12</span></div>
         <div class="card">Last Session Length<br /><span>${(previousTimeSpent/1000).toFixed(2)} seconds</span></div>
         `;
   return stats;
@@ -96,55 +90,6 @@ function displayTopics(){
         </div>
         `;
   return topics;
-}
-
-async function displayCategory() {
-  nameList.innerHTML = ''; 
-  const data = await fetchProducts();
-  data.products.sort();
-
-  const defaultOption = document.createElement('option');
-  defaultOption.textContent = 'Select Category';
-  defaultOption.value = '';
-  nameList.appendChild(defaultOption);
-
-  const uniqueCategories = new Set();
-
-  data.products.forEach(item => {
-    if (!uniqueCategories.has(item.category)) {
-      uniqueCategories.add(item.category);
-
-      const option = document.createElement('option');
-      option.textContent = item.category;
-      option.value = item.category;
-      nameList.appendChild(option);
-    }
-  });
-}
-
-function displayPriceRange(){
-  const priceSelect = document.getElementById('priceRange');
-  priceSelect.innerHTML = ''; // Clear any existing options
-
-  const defaultOption = document.createElement('option');
-  defaultOption.textContent = 'Select Price Range';
-  defaultOption.value = '';
-  priceSelect.appendChild(defaultOption);
-
-  const priceRanges = [
-    '$0 - $10',
-    '$10 - $100',
-    '$100 - $1000',
-    '$1000 - $10000',
-    '$10000+'
-  ];
-
-  priceRanges.forEach(range => {
-    const option = document.createElement('option');
-    option.textContent = range;
-    option.value = range;
-    priceSelect.appendChild(option);
-  });
 }
 
 
