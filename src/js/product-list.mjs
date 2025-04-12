@@ -80,7 +80,7 @@ export function renderPagination(filteredProducts = allProducts) {
     const pagination = document.querySelector('.pagination');
     pagination.innerHTML = ''; // Clear existing pagination
 
-    const totalPages = Math.ceil(allProducts.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
     const pageButtons = new Set();
 
     pageButtons.add(1);
@@ -144,7 +144,7 @@ async function displayCategory() {
     });  
   }
   
-  function filterAndDisplayProducts(category) {
+  function filterAndDisplayProducts() {
     const keyword = searchInput.value.trim().toLowerCase();
     const selectedCategory = categorySelect.value;
     const selectedRange = priceRange.value;
@@ -157,8 +157,9 @@ async function displayCategory() {
       const matchesPrice = isInPriceRange(product.price, selectedRange);
   
       return matchesSearch && matchesCategory && matchesPrice;})
-  
+      
       renderProducts(filtered);
+      productsPerPage(filtered);
       renderPagination(filtered); 
       console.log(filtered);
   }

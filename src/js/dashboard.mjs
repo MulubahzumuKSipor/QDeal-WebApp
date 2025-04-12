@@ -1,5 +1,3 @@
-
-
 const dashStats = document.querySelector('#stats');
 const dashRates = document.querySelector('#rates');
 const dashTopics = document.querySelector('#interest');
