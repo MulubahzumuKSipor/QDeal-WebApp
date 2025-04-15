@@ -37,10 +37,15 @@ h1 span {
   color: gold;
 }
 
-nav ul {
+.nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
   gap: 20px;
 }
 
