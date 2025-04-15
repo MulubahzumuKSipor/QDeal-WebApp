@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickDeals Dashboard</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/min-styles.css" />
   </head>
   <body>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
     <section id="product">
       <p>Products</p>
       <img src="../images/solar--cart-bold-duotone.svg" alt="Cart" />
@@ -26,6 +28,7 @@
         <label for="category" class="label">Category:</label>
         <select id="category"></select>
       </section>
+      <section id="currency-converter"></section>
       <section class="products">
         <ul class="product-list"></ul>
       </section>
@@ -40,10 +43,12 @@
             ><h1 class="logo">Quick<span>Deals</span></h1></a
           >
           <nav class="nav">
-            <li><a class="nav-button" href="#">Products</a></li>
-            <li><a class="nav-button" href="#">Services</a></li>
-            <li><a class="nav-button" href="#">Connect</a></li>
-            <li><a class="nav-button" href="#">Latest Offers</a></li>
+            <ul>
+              <li><a class="nav-button" href="#">Products</a></li>
+              <li><a class="nav-button" href="#">Services</a></li>
+              <li><a class="nav-button" href="#">Connect</a></li>
+              <li><a class="nav-button" href="#">Latest Offers</a></li>
+            </ul>
           </nav>
           <div class="middle">
             <h3>Support</h3>
@@ -62,5 +67,6 @@
 
     <script type="module" src="../js/product-list.mjs" defer></script>
     <script type="module" src="../js/dashboard.mjs" defer></script>
+    <script src="../js/sidebar-toggle.js" defer></script>
   </body>
 </html>

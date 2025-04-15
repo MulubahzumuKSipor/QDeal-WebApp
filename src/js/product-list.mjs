@@ -57,7 +57,7 @@ export function renderProducts(products) {
         const productItem = document.createElement('div');
         productItem.className = 'product-item';
         productItem.innerHTML = `
-        <img src="${product.thumbnail}" alt="${product.title}" class="product-image" />
+        <img src="${product.thumbnail}" alt="${product.title}" class="product-image" loading="lazy" />
         <p>Price: $${product.price}</p>
         <h2>${product.title}</h2>
         
@@ -142,9 +142,9 @@ async function displayCategory() {
         nameList.appendChild(option);
       }
     });  
-  }
+}
   
-  function filterAndDisplayProducts() {
+function filterAndDisplayProducts() {
     const keyword = searchInput.value.trim().toLowerCase();
     const selectedCategory = categorySelect.value;
     const selectedRange = priceRange.value;
@@ -162,9 +162,9 @@ async function displayCategory() {
       productsPerPage(filtered);
       renderPagination(filtered); 
       console.log(filtered);
-  }
+}
   
-  function displayPriceRange(){
+function displayPriceRange(){
     const priceSelect = document.getElementById('priceRange');
     priceSelect.innerHTML = ''; // Clear any existing options
   
@@ -187,9 +187,9 @@ async function displayCategory() {
       option.value = range;
       priceSelect.appendChild(option);
     });
-  }
+}
   
-  function isInPriceRange(price, range) {
+function isInPriceRange(price, range) {
     if (!range) return true; // No range selected, include all products
   
     const [min, max] = range.split(' - ').map(val => {
@@ -198,15 +198,19 @@ async function displayCategory() {
     });
   
     return price >= min && (max ? price <= max : true);
-  }
+}
+
+
   
   
-  searchButton.addEventListener('click', filterAndDisplayProducts);
+searchButton.addEventListener('click', filterAndDisplayProducts);
+
 searchInput.addEventListener('keyup', e => {
     if (e.key === 'Enter') filterAndDisplayProducts();
 });
 categorySelect.addEventListener('change', filterAndDisplayProducts);
 priceRange.addEventListener('change', filterAndDisplayProducts);
+
 
 init();
 
