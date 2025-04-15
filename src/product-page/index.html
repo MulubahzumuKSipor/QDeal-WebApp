@@ -18,6 +18,9 @@
       <section id="stats"></section>
       <section id="rates"></section>
       <section id="interest"></section>
+      <p></p>
+      <label for="conversion" class="convertCurrency">Convert Currency</label>
+      <select name="currency" id="country"></select>
       <section id="tools">
         <input type="text" id="search" placeholder="Search for products..." />
         <button id="search-button">Search</button>
@@ -43,7 +46,7 @@
             ><h1 class="logo">Quick<span>Deals</span></h1></a
           >
           <nav class="nav">
-            <ul>
+            <ul id="sidenav">
               <li><a class="nav-button" href="#">Products</a></li>
               <li><a class="nav-button" href="#">Services</a></li>
               <li><a class="nav-button" href="#">Connect</a></li>
@@ -68,5 +71,6 @@
     <script type="module" src="../js/product-list.mjs" defer></script>
     <script type="module" src="../js/dashboard.mjs" defer></script>
     <script src="../js/sidebar-toggle.js" defer></script>
+    <script type="module" src="../js/convertCurrency.mjs"></script>
   </body>
 </html>
