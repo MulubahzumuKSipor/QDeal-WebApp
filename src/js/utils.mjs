@@ -12,4 +12,9 @@ const footerTemplate = await loadTemplate("../partials/footer.html");
 const footerElement = document.querySelector("#footer");
 renderWithTemplate(footerTemplate, footerElement);
 }
+
+function currencyConverter(price) {
+    
+    
+}
   
