@@ -306,7 +306,6 @@ button {
   padding-left: 20px;
   margin-right: 20px;
   overflow-y: auto;
-  flex-grow: 1;
   justify-content: space-between;
 }
 #main-content h2 {
