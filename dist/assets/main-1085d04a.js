@@ -1,1 +1,0 @@
-import"./styles-fdcb2ba5.js";async function n(t){return await(await fetch(t)).text()}function o(t,e){e.innerHTML=t}async function a(){const t=await n("../partials/footer.html"),e=document.querySelector("#footer");o(t,e)}a().then(()=>{document.getElementById("year").textContent=new Date().getFullYear()});

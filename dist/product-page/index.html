@@ -5,109 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickDeals Dashboard</title>
     
-    <script type="module" crossorigin src="/assets/dashboard-fb281bdc.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/styles-fdcb2ba5.js">
-    <link rel="stylesheet" href="/assets/styles-2ab02944.css">
+    
+    <script type="module" crossorigin src="/assets/product-5dffcb50.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/styles-f409efb2.js">
+    <link rel="modulepreload" crossorigin href="/assets/dashboard-312d2457.js">
+    <link rel="stylesheet" href="/assets/styles-6f48a90d.css">
+    <link rel="stylesheet" href="/assets/min-styles-7af64136.css">
   </head>
   <body>
-    <div class="dashboard">
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <section id="product">
+      <p>Products</p>
+      <img src="/assets/solar--cart-bold-duotone-e3875c85.svg" alt="Cart" />
+    </section>
+    <section id="main-content">
+      <h2>Welcome <span class="name"></span></h2>
+      <section id="stats"></section>
+      <section id="rates"></section>
+      <section id="interest"></section>
+      <p></p>
+      <label for="conversion" class="convertCurrency">Convert Currency</label>
+      <select name="currency" id="country"></select>
+      <section id="tools">
+        <input type="text" id="search" placeholder="Search for products..." />
+        <button id="search-button">Search</button>
+
+        <label for="price" class="label">Price Range:</label>
+        <select name="price" id="priceRange"></select>
+
+        <label for="category" class="label">Category:</label>
+        <select id="category"></select>
+      </section>
+      <section id="currency-converter"></section>
+      <section class="products">
+        <ul class="product-list"></ul>
+      </section>
+      <section>
+        <div class="pagination"></div>
+      </section>
+    </section>
+    <section class="dashboard">
       <aside class="sidebar">
         <div>
-          <a href="index.html"
+          <a href="../index.html"
             ><h1 class="logo">Quick<span>Deals</span></h1></a
           >
           <nav class="nav">
-            <button class="nav-button">Products</button>
-            <button class="nav-button">Services</button>
-            <button class="nav-button">Connect</button>
-            <button class="nav-button">Latest Offers</button>
+            <ul id="sidenav">
+              <li><a class="nav-button" href="#">Products</a></li>
+              <li><a class="nav-button" href="#">Services</a></li>
+              <li><a class="nav-button" href="#">Connect</a></li>
+              <li><a class="nav-button" href="#">Latest Offers</a></li>
+            </ul>
           </nav>
+          <div class="middle">
+            <h3>Support</h3>
+            <a href="#">Get Started</a> <br />
+            <a href="">About us</a>
+          </div>
         </div>
         <div class="sidebar-footer">
-          <div>Get Started</div>
-          <div>About us</div>
-          <div class="contact-info">
+          <p class="contact-info">
             Mulubahzumu Kemmeh Sipor<br />
             sipormulubah@outlook.com
-          </div>
+          </p>
         </div>
       </aside>
+    </section>
 
-      <main class="main-content">
-        <div class="header">
-          <h2>Welcome <span id="firstName"></span></h2>
-          <div class="avatar"></div>
-        </div>
-
-        <div class="filters">
-          <select>
-            <option>All Products</option>
-          </select>
-          <select>
-            <option>Price Range: 1000USD - 10000USD</option>
-          </select>
-          <select>
-            <option>Category: Technology</option>
-          </select>
-        </div>
-
-        <div class="stats">
-          <div class="stat-card">Active Users<br /><strong>27/80</strong></div>
-          <div class="stat-card">
-            Products Bought<br /><strong>3,298</strong>
-          </div>
-          <div class="stat-card">
-            Last Session Length<br /><strong>2m 34s</strong>
-          </div>
-          <div class="stat-card">
-            Sales Rate Gain<br /><strong>+34%</strong>
-          </div>
-        </div>
-
-        <div class="interest-cards">
-          <div class="interest-card">
-            <h3>Most Interested</h3>
-            <div>
-              Covid Protocols
-              <div class="bar green" style="width: 95%"></div>
-            </div>
-            <div>
-              Cyber Security Basics
-              <div class="bar green" style="width: 92%"></div>
-            </div>
-            <div>
-              Social Media Policies
-              <div class="bar green" style="width: 89%"></div>
-            </div>
-          </div>
-
-          <div class="interest-card">
-            <h3>Least Interested</h3>
-            <div>
-              Food Safety
-              <div class="bar red" style="width: 74%"></div>
-            </div>
-            <div>
-              Compliance Basics Procedures
-              <div class="bar red" style="width: 52%"></div>
-            </div>
-            <div>
-              Company Networking
-              <div class="bar red" style="width: 36%"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-list" id="product-list"></div>
-
-        <div class="pagination">
-          <button id="prev-page">&lt;</button>
-          <span id="page-num">1</span>
-          <button id="next-page">&gt;</button>
-        </div>
-      </main>
-    </div>
-
+    
+    
+    
     
   </body>
 </html>
