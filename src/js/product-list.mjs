@@ -53,6 +53,9 @@ export function renderProducts(products) {
           <img src="${product.thumbnail}" alt="${product.title}" class="product-image" loading="lazy" />
           <p>Price: $${convertedPrice}</p>
           <h2>${product.title}</h2>
+          <div class="product-detail__add">
+          <button id="addToCart" data-id="${product.id}" class="button">Add to Cart</button>
+        </div>
     </a>    
         `;
 

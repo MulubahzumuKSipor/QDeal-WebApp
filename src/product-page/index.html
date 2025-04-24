@@ -9,43 +9,10 @@
     <script type="module" src="../js/main.mjs"></script>
   </head>
   <body>
-    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-    <section id="product">
-      <p>Products</p>
-      <img src="../images/solar--cart-bold-duotone.svg" alt="Cart" />
-    </section>
-    <section id="main-content">
-      <h2>Welcome <span class="name"></span></h2>
-      <section id="stats"></section>
-      <section id="rates"></section>
-      <section id="interest"></section>
-      <p></p>
-      <label for="conversion" class="convertCurrency">Convert Currency</label>
-      <select name="currency" id="country"></select>
-      <section id="tools">
-        <input type="text" id="search" placeholder="Search for products..." />
-        <button id="search-button">Search</button>
-
-        <label for="price" class="label">Price Range:</label>
-        <select name="price" id="priceRange"></select>
-
-        <label for="category" class="label">Category:</label>
-        <select id="category"></select>
-      </section>
-      <section id="currency-converter"></section>
-      <section class="products">
-        <ul class="product-list"></ul>
-      </section>
-      <section>
-        <div class="pagination"></div>
-      </section>
-    </section>
+    <header id="main-header"></header>
     <section class="dashboard">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <div>
-          <a href="../index.html"
-            ><h1 class="logo">Quick<span>Deals</span></h1></a
-          >
           <nav class="nav">
             <ul id="sidenav">
               <li><a class="nav-button" href="#">Products</a></li>
@@ -67,11 +34,39 @@
           </p>
         </div>
       </aside>
+      <section id="main-content">
+        <h2>Welcome <span class="name"></span></h2>
+        <section id="stats"></section>
+        <section id="rates"></section>
+        <section id="interest"></section>
+        <p></p>
+        <section id="tools">
+          <input type="text" id="search" placeholder="Search for products..." />
+          <button id="search-button">Search</button>
+
+          <label for="price" class="label">Price Range:</label>
+          <select name="price" id="priceRange"></select>
+
+          <label for="category" class="label">Category:</label>
+          <select id="category"></select>
+          <label for="conversion" class="convertCurrency label"
+            >Convert Currency</label
+          >
+          <select name="currency" id="country"></select>
+          <section id="currency-converter"></section>
+        </section>
+        <section class="products">
+          <ul class="product-list"></ul>
+        </section>
+        <section>
+          <div class="pagination"></div>
+        </section>
+      </section>
     </section>
     <footer id="main-footer"></footer>
-
-    <script type="module" src="../js/product-list.mjs" defer></script>
-    <script type="module" src="../js/dashboard.mjs" defer></script>
-    <script type="module" src="../js/sidebar-toggle.mjs" defer></script>
   </body>
+
+  <script type="module" src="../js/product-list.mjs" defer></script>
+  <script type="module" src="../js/dashboard.mjs" defer></script>
+  <script type="module" src="../js/sidebar-toggle.mjs" defer></script>
 </html>
