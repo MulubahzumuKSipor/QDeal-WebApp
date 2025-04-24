@@ -1,24 +1,29 @@
+import { fetchCurrency } from "./currency-data.mjs";
+import { productsPerPage, allProducts } from "./product-list.mjs";
+
 export let allCurrency = [];
 let currentRate = 1;
 let currentCurrency = "USD";
 const countryList = document.getElementById("country");
-const url =
-  "https://v6.exchangerate-api.com/v6/ff1d93c25b679f694ebe5a1c/latest/USD";
-
-export async function fetchCurrency() {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("Failed to fetch products");
-  return await res.json();
-}
-
-fetchCurrency().then((data) => {
-  allCurrency = data.conversion_rates;
-  console.log(allCurrency);
-});
 
 export function setCurrentRate(rate, currency) {
   currentRate = rate;
   currentCurrency = currency;
+}
+
+export async function updateCurrentRate(rate, currency) {
+  const data = await fetchCurrency();
+  try {
+    if (data && data.conversion_rates) {
+      allCurrency = data.conversion_rates;
+      currentRate = data.conversion_rates[currency];
+      currentCurrency = currency;
+      setCurrentRate(currentRate, currentCurrency);
+      productsPerPage(allProducts);
+    }
+  } catch (error) {
+    console.error("Failed to update currency rates:", error);
+  }
 }
 
 export async function populateCurrencyOptions() {

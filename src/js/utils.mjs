@@ -1,20 +1,20 @@
+const footer = document.querySelector("#main-footer");
+const year = new Date().getFullYear();
 
-export function setClick(selector, callback) {
-qs(selector).addEventListener("touchend", (event) => {
-    event.preventDefault();
-    callback();
-});
-qs(selector).addEventListener("click", callback);
+export function renderFooter() {
+  footer.innerHTML = displayFooter();
+}
+function displayFooter() {
+  const main_footer = `
+    &copy | Mulubahzumu Kemmeh Sipor | 2025 - ${year}
+  `;
+  return main_footer;
 }
 
-export async function loadFooter() {
-const footerTemplate = await loadTemplate("../partials/footer.html");
-const footerElement = document.querySelector("#footer");
-renderWithTemplate(footerTemplate, footerElement);
+// helper to get parameter strings
+export function getParam(param) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const product = urlParams.get(param);
+  return product;
 }
-
-function currencyConverter(price) {
-    
-    
-}
-  

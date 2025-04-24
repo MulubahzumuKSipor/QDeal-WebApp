@@ -1,51 +1,30 @@
 import {
   populateCurrencyOptions,
-  fetchCurrency,
+  updateCurrentRate,
   setCurrentRate,
   allCurrency,
 } from "./convertCurrency.mjs";
+import { fetchCurrency } from "./currency-data.mjs";
+import { fetchProducts } from "./product-data.mjs";
+import { getParam } from "./utils.mjs";
+
 let currentPage = 1;
 let itemsPerPage = 8;
-let allProducts = [];
+export let allProducts = [];
 let currentRate = 1;
+
 let currentCurrency = "USD";
 
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("search-button");
 const priceRange = document.getElementById("priceRange");
-const categorySelect = document.getElementById("category");
 const nameList = document.querySelector("#category");
 const countryList = document.getElementById("country");
 
 export let totalProducts = [];
 
-const url = "https://dummyjson.com/products?limit=200&skip=0";
-
-export async function fetchProducts() {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("Failed to fetch products");
-  return await res.json();
-}
-
-fetchProducts().then((data) => {
-  allProducts = data.products;
-  console.log(data);
-  console.log(data.products.category);
-  renderProducts(data.products);
-  renderPagination();
-  productsPerPage();
-});
-
-fetchProducts().then((data) => {
-  totalProducts = data.products;
-  console.log(totalProducts);
-
-  totalProducts.forEach((item) => {
-    console.log(item.category);
-  });
-});
-
 async function init() {
+  await updateCurrentRate(currentRate, currentCurrency);
   await populateCurrencyOptions();
   await fetchCurrency();
   const data = await fetchProducts();
@@ -70,10 +49,11 @@ export function renderProducts(products) {
     productItem.setAttribute("data-price", product.price);
     productItem.className = "product-item";
     productItem.innerHTML = `
-        <img src="${product.thumbnail}" alt="${product.title}" class="product-image" loading="lazy" />
-        <p>Price: $${convertedPrice}</p>
-        <h2>${product.title}</h2>
-        
+    <a href="../product-details/index.html?id=${product.id}" class="product-link">
+          <img src="${product.thumbnail}" alt="${product.title}" class="product-image" loading="lazy" />
+          <p>Price: $${convertedPrice}</p>
+          <h2>${product.title}</h2>
+    </a>    
         `;
 
     productList.appendChild(productItem);
@@ -157,7 +137,7 @@ async function displayCategory() {
 
 function filterAndDisplayProducts() {
   const keyword = searchInput.value.trim().toLowerCase();
-  const selectedCategory = categorySelect.value;
+  const selectedCategory = nameList.value;
   const selectedRange = priceRange.value;
 
   currentPage = 1;
@@ -224,13 +204,20 @@ function keepCurrencyRates() {
     }
   });
 }
+if (searchButton) {
+  searchButton.addEventListener("click", filterAndDisplayProducts);
+}
 
-searchButton.addEventListener("click", filterAndDisplayProducts);
-
-searchInput.addEventListener("keyup", (e) => {
-  if (e.key === "Enter") filterAndDisplayProducts();
-});
-categorySelect.addEventListener("change", filterAndDisplayProducts);
-priceRange.addEventListener("change", filterAndDisplayProducts);
-
+if (searchInput) {
+  searchInput.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") filterAndDisplayProducts();
+  });
+}
+if (priceRange) {
+  priceRange.addEventListener("change", filterAndDisplayProducts);
+}
+if (nameList) {
+  nameList.addEventListener("change", filterAndDisplayProducts);
+}
+console.log(currentRate);
 init();

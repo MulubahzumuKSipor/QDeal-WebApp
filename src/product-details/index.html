@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickDeals Dashboard</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/min-styles.css" />
+    <script type="module" src="../js/main.mjs"></script>
   </head>
   <body>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
     <section id="product">
       <p>Products</p>
       <img src="../images/solar--cart-bold-duotone.svg" alt="Cart" />
     </section>
     <section id="main-content">
+      <h2><span class="name"></span></h2>
+      <div id="product-details"></div>
+    </section>
     <section class="dashboard">
       <aside class="sidebar">
         <div>
@@ -19,10 +25,12 @@
             ><h1 class="logo">Quick<span>Deals</span></h1></a
           >
           <nav class="nav">
-            <li><a class="nav-button" href="#">Products</a></li>
-            <li><a class="nav-button" href="#">Services</a></li>
-            <li><a class="nav-button" href="#">Connect</a></li>
-            <li><a class="nav-button" href="#">Latest Offers</a></li>
+            <ul id="sidenav">
+              <li><a class="nav-button" href="#">Products</a></li>
+              <li><a class="nav-button" href="#">Services</a></li>
+              <li><a class="nav-button" href="#">Connect</a></li>
+              <li><a class="nav-button" href="#">Latest Offers</a></li>
+            </ul>
           </nav>
           <div class="middle">
             <h3>Support</h3>
@@ -38,8 +46,8 @@
         </div>
       </aside>
     </section>
-
-    <script type="module" src="../js/product-list.mjs" defer></script>
-    <script type="module" src="../js/dashboard.mjs" defer></script>
+    <footer id="main-footer"></footer>
+    <script type="module" src="../js/sidebar-toggle.mjs" defer></script>
+    <script type="module" src="../js/product-details.mjs" defer></script>
   </body>
 </html>
