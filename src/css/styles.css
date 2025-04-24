@@ -7,10 +7,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
-
-.hamburger {
-  display: none;
+#main-cart {
+  flex: 1;
 }
 
 /* Header */
@@ -23,7 +27,6 @@ header {
   margin-left: 5rem;
   margin-right: 5rem;
 }
-
 h1 {
   font-size: 24px;
   color: darkblue;
@@ -36,23 +39,27 @@ h1 {
 h1 span {
   color: gold;
 }
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.navigation a {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  gap: 40px;
 }
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.navigation a:hover {
+  background-color: #837f7f;
+  color: white;
+}
+.navigation a:active {
+  background-color: #1f1f1f;
+  color: white;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 button {
@@ -99,7 +106,7 @@ button {
   background: white;
   color: black;
   font-weight: bold;
-  margin-left: 10px;
+  width: 50%;
 }
 
 /* Login Form */
@@ -242,6 +249,14 @@ button {
   margin-bottom: 1px;
 }
 
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: black;
+  border-bottom: #fff 5px solid;
+}
 #main-footer {
   display: flex;
   justify-content: center;
@@ -249,17 +264,15 @@ button {
 
 /* Dashboard */
 .dashboard {
-  display: flex;
-  height: 100vh;
   font-family: sans-serif;
 }
 
 .sidebar {
   position: fixed;
   left: 0;
-  top: 0;
+  bottom: 0;
   width: 200px;
-  height: 95vh; /* full viewport height */
+  height: 100vh; /* Full viewport height initially */
   z-index: 1000;
   background: #1a1a1a;
   color: white;
@@ -267,6 +280,8 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  transition: height 0.3s ease; /* Smooth transition for height changes */
+  overflow: hidden;
 }
 
 .logo {
@@ -306,11 +321,9 @@ button {
   gap: 10px;
 }
 #main-content {
-  margin-left: 240px; /* same as sidebar width */
-  padding-left: 20px;
-  margin-right: 20px;
+  margin-left: 240px; /* matches sidebar width */
+  padding: 20px;
   overflow-y: auto;
-  justify-content: space-between;
 }
 #main-content h2 {
   font-size: 2rem;
@@ -329,6 +342,15 @@ button {
   outline: none;
   background-color: #fff;
   color: black;
+}
+#country {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: black;
+  width: 70%;
 }
 
 /* Stats */
@@ -539,4 +561,27 @@ button {
 .product-item p:last-of-type {
   font-weight: bold;
   color: #0077cc;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #00008b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+.button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 86, 179, 0.4);
+}
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
