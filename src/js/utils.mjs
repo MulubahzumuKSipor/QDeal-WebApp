@@ -20,7 +20,7 @@ function displayHeader() {
         >
       </div>
       <a href="../cart/index.html"
-        ><img src="../images/solar--cart-bold-duotone.svg" alt="Cart" id="cart"
+        ><img src="../images/cart.svg" alt="Cart" id="cart"
       /></a>`;
   return main_header;
 }
