@@ -7,50 +7,16 @@
     
     
     
-    <script type="module" crossorigin src="/assets/product-8032d6d8.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/min-styles-db0a8fb8.js">
-    <link rel="modulepreload" crossorigin href="/assets/main-7d6a57ea.js">
-    <link rel="modulepreload" crossorigin href="/assets/sidebar-toggle-608ada78.js">
-    <link rel="stylesheet" href="/assets/min-styles-75e1ce27.css">
+    <script type="module" crossorigin src="/assets/product-17912c1e.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/min-styles-62ed2458.js">
+    <link rel="stylesheet" href="/assets/min-styles-2de41a8f.css">
+    <link rel="stylesheet" href="/assets/styles-a3585484.css">
   </head>
   <body>
-    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-    <section id="product">
-      <p>Products</p>
-      <img src="/assets/solar--cart-bold-duotone-e3875c85.svg" alt="Cart" />
-    </section>
-    <section id="main-content">
-      <h2>Welcome <span class="name"></span></h2>
-      <section id="stats"></section>
-      <section id="rates"></section>
-      <section id="interest"></section>
-      <p></p>
-      <label for="conversion" class="convertCurrency">Convert Currency</label>
-      <select name="currency" id="country"></select>
-      <section id="tools">
-        <input type="text" id="search" placeholder="Search for products..." />
-        <button id="search-button">Search</button>
-
-        <label for="price" class="label">Price Range:</label>
-        <select name="price" id="priceRange"></select>
-
-        <label for="category" class="label">Category:</label>
-        <select id="category"></select>
-      </section>
-      <section id="currency-converter"></section>
-      <section class="products">
-        <ul class="product-list"></ul>
-      </section>
-      <section>
-        <div class="pagination"></div>
-      </section>
-    </section>
+    <header id="main-header"></header>
     <section class="dashboard">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <div>
-          <a href="../index.html"
-            ><h1 class="logo">Quick<span>Deals</span></h1></a
-          >
           <nav class="nav">
             <ul id="sidenav">
               <li><a class="nav-button" href="#">Products</a></li>
@@ -72,11 +38,52 @@
           </p>
         </div>
       </aside>
+      <section id="main-content">
+        <h2>Welcome <span class="name"></span></h2>
+        <section id="stats"></section>
+        <section id="rates"></section>
+        <section id="interest"></section>
+        <br />
+        <section id="tools">
+          <label for="price" class="label">Price Range:</label>
+          <select name="price" id="priceRange"></select>
+
+          <label for="category" class="label">Category:</label>
+          <select id="category"></select>
+          <label for="conversion" class="convertCurrency label"
+            >Convert Currency</label
+          >
+          <select name="currency" id="country"></select>
+          <section id="currency-converter"></section>
+        </section>
+        <label for="Search" class="search_label">
+          <input type="text" id="search" placeholder="Search for products..." />
+          <button id="search-button" class="searchButton">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"
+              />
+            </svg>
+          </button>
+        </label>
+        <section class="products">
+          <ul class="product-list"></ul>
+        </section>
+        <section>
+          <div class="pagination"></div>
+        </section>
+      </section>
     </section>
     <footer id="main-footer"></footer>
-
-    
-    
-    
   </body>
+
+  
+  
+  <!-- <script type="module" src="../js/sidebar-toggle.mjs" defer></script> -->
 </html>
