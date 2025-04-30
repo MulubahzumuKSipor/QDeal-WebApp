@@ -10,9 +10,12 @@ const serviceBenefits = document.querySelector("#serviceBenefits");
 const servicePrice = document.querySelector("#servicePrice");
 const serviceBtn = document.querySelector("#serviceBtn");
 
-const servicesFetched = await fetchServices();
+async function returnServices() {
+  const servicesFetched = await fetchServices();
+  return servicesFetched;
+}
 
-servicesFetched.forEach((service, index) => {
+returnServices.forEach((service, index) => {
   const serviceDiv = document.createElement("div");
   serviceDiv.classList.add("services_item");
   serviceDiv.innerHTML = `
