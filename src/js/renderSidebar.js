@@ -5,7 +5,7 @@ function renderSidebar() {
     <div>
           <nav class="nav">
             <ul id="sidenav">
-              <li><a class="nav-button" href="index.html">Products</a></li>
+              <li><a class="nav-button" href="../product-page/index.html">Products</a></li>
               <li>
                 <a class="nav-button" href="../services/index.html">Services</a>
               </li>
