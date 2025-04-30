@@ -1,0 +1,64 @@
+{
+    "services" : [
+        {
+            "name": "Service 1",
+            "description": "Description of Service 1",
+            "benefits": [
+                "Benefit 1",
+                "Benefit 2",
+                "Benefit 3"
+            ],
+            "price": 100,
+            "currency": "USD",
+            "url": "../services/index.html"
+        },
+        {
+            "name": "Service 2",
+            "description": "Description of Service 1",
+            "benefits": [
+                "Benefit 1",
+                "Benefit 2",
+                "Benefit 3"
+            ],
+            "price": 100,
+            "currency": "USD",
+            "url": "../services/index.html"
+        },
+        {
+            "name": "Service 3",
+            "description": "Description of Service 1",
+            "benefits": [
+                "Benefit 1",
+                "Benefit 2",
+                "Benefit 3"
+            ],
+            "price": 100,
+            "currency": "USD",
+            "url": "../services/index.html"
+        },
+        {
+            "name": "Service 4",
+            "description": "Description of Service 1",
+            "benefits": [
+                "Benefit 1",
+                "Benefit 2",
+                "Benefit 3"
+            ],
+            "price": 100,
+            "currency": "USD",
+            "url": "../services/index.html"
+        },
+        {
+            "name": "Service 5",
+            "description": "Description of Service 1",
+            "benefits": [
+                "Benefit 1",
+                "Benefit 2",
+                "Benefit 3"
+            ],
+            "price": 100,
+            "currency": "USD",
+            "url": "../services/index.html"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickDeals Services</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/min-styles.css" />
+    <script type="module" src="../js/main.mjs"></script>
+    <script type="module" src="../js/renderModal.js"></script>
+  </head>
+  <body>
+    <header id="main-header"></header>
+    <main>
+      <aside class="sidebar" id="sidebar"></aside>
+      <section id="services_content" class="services_content">
+        <div class="services_header">
+          <h2>Services</h2>
+        </div>
+        <div class="services_description">
+          <p>
+            <span>Quick Deals</span><br /><br />
+            Connects you to fast, affordable, and reliable services,
+            <br />
+            offering top deals on electronics, fashion, home essentials,
+            repairs,
+            <br />
+            and exclusive local promotions. <br />
+            <br />Whether you're shopping for the best prices or need quick
+            professional solutions, <br />
+            we deliver trusted support, unbeatable savings, and everyday
+            convenience — all in one
+            <br />
+            place.
+          </p>
+        </div>
+        <div class="services_offered">
+          <h3>Services Offered</h3>
+          <div id="services" class="services"></div>
+          <div id="modal" class="modal hidden">
+            <div class="modal-content">
+              <span class="close" id="close">&times;</span>
+              <section id="serviceTitle"></section>
+              <section id="serviceDescription"></section>
+              <section id="serviceBenefits"></section>
+              <section id="servicePrice"></section>
+              <section id="serviceBtn"></section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="main-footer"></footer>
+  </body>
+  <script type="module" src="../js/renderSidebar.js"></script>
+  <script type="module" src="../js/renderModal.js"></script>
+  <!-- <script type="module" src="../js/sidebar-toggle.mjs" defer></script> -->
+</html>

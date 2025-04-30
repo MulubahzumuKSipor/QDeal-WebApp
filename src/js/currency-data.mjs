@@ -1,5 +1,5 @@
-const url =
-  "https://v6.exchangerate-api.com/v6/ff1d93c25b679f694ebe5a1c/latest/USD";
+const apiKey = "42aeb5fe8a7ce686cb0937df";
+const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 
 export async function fetchCurrency() {
   return fetch(url)
