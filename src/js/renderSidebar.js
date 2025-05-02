@@ -4,6 +4,11 @@ function renderSidebar() {
   const sideBarContent = `
     <div>
           <nav class="nav">
+            <div class="header-content">
+              <a href="../index.html"
+                ><h1 class="logo">Quick<span>Deals</span></h1></a
+              >
+            </div>
             <ul id="sidenav">
               <li><a class="nav-button" href="../product-page/index.html">Products</a></li>
               <li>

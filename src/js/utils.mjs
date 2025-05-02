@@ -2,6 +2,8 @@ const footer = document.querySelector("#main-footer");
 const header = document.querySelector("#main-header");
 const year = new Date().getFullYear();
 const cartButton = document.querySelector("#addToCart");
+const menuToggleButton = document.getElementById("menu-toggle");
+const sidebar = document.querySelector(".sidebar");
 
 export function getLocalStorage(key) {
   const data = localStorage.getItem(key);
@@ -55,9 +57,14 @@ function displayFooter() {
 }
 
 function displayHeader() {
-  const main_header = `<div class="header-content">
-        <a href="../index.html"
-          ><h1 class="logo">Quick<span>Deals</span></h1></a
+  const main_header = `<div class="profile">
+        <div id="header-content2">
+              <a href="../index.html"
+                ><h1 class="logo">Quick<span>Deals</span></h1></a
+              >
+            </div>
+        <a href="#"
+          ><h3 class="userName">Welcome <span id="userName">User Name</span></h3></a
         >
       </div>
       <a href="../cart/index.html"
@@ -89,4 +96,9 @@ document.addEventListener("click", () => {
   if (backButton) {
     backButton.addEventListener("click", () => smartGoBack());
   }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  menuToggleButton.addEventListener("click", () => {
+    sidebar.classList.toggle("visible");
+  });
 });

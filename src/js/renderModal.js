@@ -10,21 +10,21 @@ const serviceBenefits = document.querySelector("#serviceBenefits");
 const servicePrice = document.querySelector("#servicePrice");
 const serviceBtn = document.querySelector("#serviceBtn");
 
-async function returnServices() {
-  const servicesFetched = await fetchServices();
-  return servicesFetched;
-}
+let servicesFetched = [];
 
-returnServices.forEach((service, index) => {
-  const serviceDiv = document.createElement("div");
-  serviceDiv.classList.add("services_item");
-  serviceDiv.innerHTML = `
+async function renderServices() {
+  servicesFetched = await fetchServices();
+  servicesFetched.forEach((service, index) => {
+    const serviceDiv = document.createElement("div");
+    serviceDiv.classList.add("services_item");
+    serviceDiv.innerHTML = `
     <h3>${service.name}</h3>
     <p>${service.description}</p>
     <button onclick="openModal(${index})">Learn More</button>
   `;
-  services.appendChild(serviceDiv);
-});
+    services.appendChild(serviceDiv);
+  });
+}
 
 export function openModal(serviceIndex) {
   const service = servicesFetched[serviceIndex];
@@ -48,3 +48,5 @@ window.addEventListener("click", (e) => {
     modal.classList.add("hidden");
   }
 });
+
+renderServices();

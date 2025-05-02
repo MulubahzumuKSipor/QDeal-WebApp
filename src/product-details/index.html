@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickDeals Dashboard</title>
-    <link rel="stylesheet" href="../css/product.css" />
-    <link rel="stylesheet" href="../css/min-styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <script type="module" src="../js/main.mjs"></script>
   </head>
   <body>
     <header id="main-header"></header>
-    <section id="main-content">
+    <section class="main-content">
       <div class="header-content">
         <button id="backButton" class="button">Go Back</button>
       </div>
+      <aside class="sidebar" id="sidebar"></aside>
       <div id="product-details"></div>
     </section>
     <footer id="main-footer"></footer>
     <script type="module" src="../js/product-details.mjs" defer></script>
+    <script type="module" src="../js/renderSidebar.js"></script>
   </body>
 </html>

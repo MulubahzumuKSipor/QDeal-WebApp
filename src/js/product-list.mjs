@@ -6,7 +6,6 @@ import {
 } from "./convertCurrency.mjs";
 import { fetchCurrency } from "./currency-data.mjs";
 import { fetchProducts } from "./product-data.mjs";
-import { getParam } from "./utils.mjs";
 
 let currentPage = 1;
 let itemsPerPage = 8;
@@ -21,15 +20,12 @@ const priceRange = document.getElementById("priceRange");
 const nameList = document.querySelector("#category");
 const countryList = document.getElementById("country");
 
-export let totalProducts = [];
-
 async function init() {
   await updateCurrentRate(currentRate, currentCurrency);
   await populateCurrencyOptions();
   await fetchCurrency();
   const data = await fetchProducts();
   allProducts = data.products;
-  totalProducts = data.products;
 
   displayPriceRange();
   await displayCategory();
@@ -125,7 +121,7 @@ async function displayCategory() {
 
   const uniqueCategories = new Set();
 
-  totalProducts.forEach((item) => {
+  allProducts.forEach((item) => {
     if (!uniqueCategories.has(item.category)) {
       uniqueCategories.add(item.category);
 
@@ -145,7 +141,7 @@ function filterAndDisplayProducts() {
 
   currentPage = 1;
 
-  const filtered = totalProducts.filter((product) => {
+  const filtered = allProducts.filter((product) => {
     const matchesSearch = product.title.toLowerCase().includes(keyword);
     const matchesCategory =
       !selectedCategory || product.category === selectedCategory;
