@@ -46,8 +46,12 @@ export function addToCart(product) {
 // });
 
 export function renderHeaderFooter() {
-  footer.innerHTML = displayFooter();
-  header.innerHTML = displayHeader();
+  if (header) {
+    header.innerHTML = displayHeader();
+  }
+  if (footer) {
+    footer.innerHTML = displayFooter();
+  }
 }
 function displayFooter() {
   const main_footer = `
