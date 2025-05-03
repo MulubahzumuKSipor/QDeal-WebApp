@@ -1,62 +1,92 @@
 {
     "services" : [
         {
-            "name": "Service 1",
-            "description": "Description of Service 1",
+            "name": "Dynamic Product Listing",
+            "description": "Our platform lets you display your products with high-quality visuals, descriptions, and accurate prices—making it easy for customers to browse your store online. Whether you’re listing 10 items or 1,000, everything stays organized and easy to update.",
+            "shortDescription": "Easily showcase your products with images, details, and pricing in a professional layout.",
             "benefits": [
-                "Benefit 1",
-                "Benefit 2",
-                "Benefit 3"
+                "Win more customers with clean, appealing product displays",
+                "Boost credibility by presenting your brand like a modern online store",
+                "Save hours of manual work with easy product uploads and editing",
+                "Handle growth effortlessly—list hundreds of products with no slowdown"
             ],
-            "price": 100,
+            "pricing": [
+                { "tier": "free", "price": 0 },
+                { "tier": "basic", "price": 10 },
+                { "tier": "premium", "price": 20 },
+                { "tier": "enterprise", "price": 30 }],
             "currency": "USD",
             "url": "../services/index.html"
         },
         {
-            "name": "Service 2",
-            "description": "Description of Service 1",
+            "name": "Currency Conversion Integration",
+            "description": "No more confusion over exchange rates. Our platform automatically converts product prices based on the latest rates, so international shoppers can see what they’re really paying—helping you reach a global audience and build credibility across borders.",
+            "shortDescription": "Show prices in your customers’ local currency to build trust and convenience.",
             "benefits": [
-                "Benefit 1",
-                "Benefit 2",
-                "Benefit 3"
+                "Attract more international buyers by speaking their currency",
+                "Increase trust with transparent pricing and fewer surprises",
+                "Boost checkout success by removing exchange rate confusion",
+                "Present your brand as global-ready and forward-thinking"
             ],
-            "price": 100,
+            "pricing": [
+                { "tier": "free", "price": 0 },
+                { "tier": "basic", "price": 10 },
+                { "tier": "premium", "price": 20 },
+                { "tier": "enterprise", "price": 30 }],
             "currency": "USD",
             "url": "../services/index.html"
         },
         {
-            "name": "Service 3",
-            "description": "Description of Service 1",
+            "name": "Real-time Customer-Vendor Negotiation",
+            "description": "Our built-in chat system allows buyers and sellers to connect directly, ask questions, and even negotiate prices on the spot. This creates a personal shopping experience and helps close more deals—especially in local markets where negotiation is expected.",
+            "shortDescription": "Chat with customers instantly and negotiate prices or deals in real time.",
             "benefits": [
-                "Benefit 1",
-                "Benefit 2",
-                "Benefit 3"
+                "Close more deals faster through instant communication",
+        "Give your store a human touch that builds loyalty",
+        "Turn curious visitors into buyers by answering doubts instantly",
+        "Capture leads before they leave with live engagement"
             ],
-            "price": 100,
+            "pricing": [
+                { "tier": "free", "price": 0 },
+                { "tier": "basic", "price": 10 },
+                { "tier": "premium", "price": 20 },
+                { "tier": "enterprise", "price": 30 }],
             "currency": "USD",
             "url": "../services/index.html"
         },
         {
-            "name": "Service 4",
-            "description": "Description of Service 1",
+            "name": "Vendor Dashboard",
+            "description": "The dashboard is your personal business control center. Upload and edit products, track views and interactions, and get insights into how your store is performing. It’s designed to be simple, powerful, and accessible even if you’re not tech-savvy.",
+            "shortDescription": "Manage your products, track performance, and control your business from one place.",
             "benefits": [
-                "Benefit 1",
-                "Benefit 2",
-                "Benefit 3"
+                "Make smarter decisions with real-time product stats",
+                "Save time and stress by managing everything in one place",
+                "Update your store quickly—even with no tech skills",
+                "Stay in control of your business 24/7 from any device"
             ],
-            "price": 100,
+            "pricing": [
+                { "tier": "free", "price": 0 },
+                { "tier": "basic", "price": 10 },
+                { "tier": "premium", "price": 20 },
+                { "tier": "enterprise", "price": 30 }],
             "currency": "USD",
             "url": "../services/index.html"
         },
         {
-            "name": "Service 5",
-            "description": "Description of Service 1",
+            "name": "Subscription Access Model",
+            "description": "We offer flexible pricing plans so you can grow at your own pace. Whether you’re just starting with a free account or scaling up with premium features like analytics, boosted listings, and currency tools—you only pay for what you need, when you need it.",
+            "shortDescription": "Choose a plan that fits your business—from free basic listings to full features.",
             "benefits": [
-                "Benefit 1",
-                "Benefit 2",
-                "Benefit 3"
+                "Affordable entry with a free tier to get started",
+        "Scale confidently with clear upgrade paths",
+        "Access premium tools like currency conversion and analytics when needed",
+        "Get value for every dollar with no wasted features"
             ],
-            "price": 100,
+            "pricing": [
+                { "tier": "free", "price": 0 },
+                { "tier": "basic", "price": 10 },
+                { "tier": "premium", "price": 20 },
+                { "tier": "enterprise", "price": 30 }],
             "currency": "USD",
             "url": "../services/index.html"
         }

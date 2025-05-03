@@ -67,7 +67,7 @@ function displayHeader() {
           ><h3 class="userName">Welcome <span id="userName">User Name</span></h3></a
         >
       </div>
-      <a href="../cart/index.html"
+      <a href="/cart/index.html"
         ><img src="../images/cart.svg" alt="Cart" id="cart"
       /></a>`;
   return main_header;
@@ -97,8 +97,8 @@ document.addEventListener("click", () => {
     backButton.addEventListener("click", () => smartGoBack());
   }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  menuToggleButton.addEventListener("click", () => {
-    sidebar.classList.toggle("visible");
-  });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   menuToggleButton.addEventListener("click", () => {
+//     sidebar.classList.toggle("visible");
+//   });
+// });
